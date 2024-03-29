@@ -12,6 +12,9 @@ export default {
         },
         yellow: {
           600: '#ce9800'
+        },
+        amber: {
+          600: '#d86f2c'
         }
       },
       fontFamily: {
