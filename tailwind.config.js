@@ -10,6 +10,9 @@ export default {
         orange: {
           600: '#d15404'
         },
+        yellow: {
+          600: '#ce9800'
+        }
       },
       fontFamily: {
         'roboto': ['Roboto', 'system-ui', 'sans-serif']
