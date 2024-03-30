@@ -3,7 +3,7 @@ import { NavArrowButton } from "../components/NavArrowButton";
 
 export function PositiveReinforcement() {
   return (
-    <main className="bg-lime-900 h-screen flex flex-col justify-center overflow-hidden">
+    <main className="bg-lime-900 h-screen flex flex-col justify-center overflow-hidden p-4 md:p-0">
       <div className=" p-2 md:p-0 my-0 mx-auto h-full w-full md:h-3/4 md:w-3/4 flex flex-col gap-10 justify-between items-center">
         <div className="w-full flex justify-between items-center">
           <NavArrowButton 
@@ -13,7 +13,7 @@ export function PositiveReinforcement() {
             } 
             color="bg-yellow-600" 
           />
-          <h1 className="text-5xl font-roboto font-bold text-white">Reforço Positivo</h1>
+          <h1 className="text-3xl text-center md:text-5xl font-roboto font-bold text-white">Reforço Positivo</h1>
           <NavArrowButton 
             to="/reinforcements/negative-reinforcement"
             children={
@@ -23,8 +23,8 @@ export function PositiveReinforcement() {
           />
         </div>
 
-        <section className="h-4/5 flex flex-col justify-center  bg-yellow-600 rounded-3xl p-8">
-          <div className="p-4 overflow-scroll overflow-y-scroll h-4/5 overflow-x-hidden">
+        <section className="h-4/5 flex flex-col justify-center  bg-yellow-600 rounded-3xl p-3 md:p-8">
+          <div className="p-2 md:p-4 overflow-scroll overflow-y-scroll h-[95%] md:h-4/5 overflow-x-hidden">
             <p className="text-justify text-md text-white font-roboto">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
