@@ -21,11 +21,11 @@ const router = createBrowserRouter([
         path: "/question",
         element: <Question />
       },
-      {
-        path: "/decision-continue-or-study",
-        element: <DecisionContinueOrStudy />
-      }
     ]
+  }, 
+  {
+    path: "/decision-continue-or-study",
+    element: <DecisionContinueOrStudy />
   }
 ])
 
