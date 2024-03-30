@@ -36,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: "/reinforcements/positive-reinforcement",
     element: <PositiveReinforcement />
+  },
+  {
+    path: "/reinforcements/negative-reinforcement",
+    element: <PositiveReinforcement />
   }
 ])
 
