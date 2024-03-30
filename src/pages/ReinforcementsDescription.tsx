@@ -31,7 +31,7 @@ export function ReinforcementsDescription() {
         <ReinforcementDescriptionCard 
           color="bg-lime-900" 
           children={
-            <CustomLink to="/question" color="bg-orange-600" title="Quero saber mais!" />
+            <CustomLink to="/reinforcements/positive-reinforcement" color="bg-orange-600" title="Quero saber mais!" />
           } 
         />
 
@@ -43,7 +43,7 @@ export function ReinforcementsDescription() {
         />
 
         <div className="w-full flex flex-col md:flex-row gap-2 md:gap-0 items-center md:justify-between">
-          <CustomLink to="/question" color="bg-orange-600" title="Início!" />
+          <CustomLink to="/" color="bg-orange-600" title="Início!" />
           <CustomLink to="/question" color="bg-lime-900" title="Vamos lá!" />
         </div>
       </div>
