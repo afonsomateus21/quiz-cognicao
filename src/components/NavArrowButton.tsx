@@ -10,7 +10,7 @@ export function NavArrowButton({ color, children, ...rest }: NavArrowButtonProps
   return (
     <Link 
       {...rest}
-      className={`size-14 md:size-20 ${color} rounded-full flex justify-center items-center absolute top-10 left-3 md:top-24 md:left-0`}>
+      className={`size-14 md:size-20 ${color} rounded-full flex justify-center items-center`}>
       {children}
     </Link>
   );
