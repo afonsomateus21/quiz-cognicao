@@ -8,6 +8,7 @@ import { Home } from './pages/Home.tsx';
 import { Question } from './pages/Question.tsx';
 import { DecisionContinueOrStudy } from './pages/DecisionContinueOrStudy.tsx';
 import { ReinforcementsDescription } from './pages/ReinforcementsDescription.tsx';
+import { PositiveReinforcement } from './pages/PositiveReinforcement.tsx';
 
 const router = createBrowserRouter([
   {
@@ -29,8 +30,12 @@ const router = createBrowserRouter([
     element: <DecisionContinueOrStudy />
   },
   {
-    path: "/reinforcements-description",
+    path: "/reinforcements",
     element: <ReinforcementsDescription />
+  },
+  {
+    path: "/reinforcements/positive-reinforcement",
+    element: <PositiveReinforcement />
   }
 ])
 
