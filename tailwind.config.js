@@ -19,6 +19,9 @@ export default {
       },
       fontFamily: {
         'roboto': ['Roboto', 'system-ui', 'sans-serif']
+      },
+      fontSize: {
+        'md': '1.5rem'
       }
     },
   },
