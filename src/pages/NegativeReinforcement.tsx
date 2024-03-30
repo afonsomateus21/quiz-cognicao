@@ -8,7 +8,7 @@ export function NegativeReinforcement() {
       <div className=" p-2 md:p-0 my-0 mx-auto h-full w-full md:h-3/4 md:w-3/4 flex flex-col gap-10 justify-between items-center">
         <div className="w-full flex justify-between items-center">
           <NavArrowButton 
-            to="/reinforcements"
+            to="/reinforcements/positive-reinforcement"
             children={
               <ArrowLeft color="#394f21" size={60} />
             } 
@@ -18,7 +18,7 @@ export function NegativeReinforcement() {
           <h1 className="text-3xl text-center md:text-5xl font-roboto font-bold text-white">Reforço Negativo</h1>
       
           <CustomLink 
-            to="/question" 
+            to="/questions" 
             title="Vamos lá!"
             color="bg-lime-900"
           />
