@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Home } from './pages/Home.tsx';
 import { Question } from './pages/Question.tsx';
 import { DecisionContinueOrStudy } from './pages/DecisionContinueOrStudy.tsx';
+import { ReinforcementsDescription } from './pages/ReinforcementsDescription.tsx';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: "/decision-continue-or-study",
     element: <DecisionContinueOrStudy />
+  },
+  {
+    path: "/reinforcements-description",
+    element: <ReinforcementsDescription />
   }
 ])
 
