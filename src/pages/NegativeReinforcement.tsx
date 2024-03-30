@@ -1,9 +1,10 @@
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { NavArrowButton } from "../components/NavArrowButton";
+import { CustomLink } from "../components/CustomLink";
 
 export function NegativeReinforcement() {
   return (
-    <main className="bg-lime-900 h-screen flex flex-col justify-center overflow-hidden p-4 md:p-0">
+    <main className="bg-orange-600 h-screen flex flex-col justify-center overflow-hidden p-4 md:p-0">
       <div className=" p-2 md:p-0 my-0 mx-auto h-full w-full md:h-3/4 md:w-3/4 flex flex-col gap-10 justify-between items-center">
         <div className="w-full flex justify-between items-center">
           <NavArrowButton 
@@ -13,13 +14,13 @@ export function NegativeReinforcement() {
             } 
             color="bg-yellow-600" 
           />
-          <h1 className="text-3xl text-center md:text-5xl font-roboto font-bold text-white">Reforço Positivo</h1>
-          <NavArrowButton 
-            to="/reinforcements/negative-reinforcement"
-            children={
-              <ArrowRight color="#394f21" size={60} />
-            } 
-            color="bg-orange-600" 
+          
+          <h1 className="text-3xl text-center md:text-5xl font-roboto font-bold text-white">Reforço Negativo</h1>
+      
+          <CustomLink 
+            to="/question" 
+            title="Vamos lá!"
+            color="bg-lime-900"
           />
         </div>
 
