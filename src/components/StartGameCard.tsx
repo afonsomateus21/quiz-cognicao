@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import BrainYellow from '../assets/brain-yellow.png';
 
 export function StartGameCard() {
@@ -18,9 +19,12 @@ export function StartGameCard() {
           <span className="text-orange-600">Ajudar ao CognBrain</span>
         </div>
 
-        <button className="bg-yellow-600 w-48 h-10 rounded-full">
+        <Link 
+          to="/decision-continue-or-study" 
+          className="bg-yellow-600 w-48 h-10 rounded-full flex justify-center items-center"
+        >
           <span className="text-white font-bold">Começar</span>
-        </button>
+        </Link>
       </div>
     </div>
   );
