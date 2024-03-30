@@ -18,7 +18,7 @@ export function DecisionContinueOrStudy() {
         </Link>
 
         <div className="flex flex-col gap-3 mt-10">
-          <CustomLink to="/question" color="bg-yellow-600" title="Vamos lá!" />
+          <CustomLink to="/reinforcements-description" color="bg-yellow-600" title="Vamos lá!" />
           <CustomLink to="/question" color="bg-orange-600" title="Não, Brain, eu me garanto!" />
         </div>
 
