@@ -10,7 +10,7 @@ export function Home() {
     <div className="p-2 md:p-0 my-0 mx-auto h-full w-full md:h-3/4 md:w-3/4 flex flex-col justify-between items-center">
       <h1 className="font-roboto font-bold text-3xl md:text-5xl text-center text-white">Behaviorismo?</h1>
 
-      <div className="flex w-4/5 justify-evenly">
+      <div className="flex flex-col md:flex-row gap-3 lg:gap-2 md:w-full lg:w-4/5 items-center md:justify-evenly">
         <IllustrationCard image={ YellowBrain } />
 
         <StartGameCard />
