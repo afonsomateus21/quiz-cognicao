@@ -1,6 +1,7 @@
 import { CustomLink } from "../components/CustomLink";
 import SeriousBrain from "../assets/serious-brain.png";
 import { ArrowLeft } from 'lucide-react';
+import { Link } from "react-router-dom";
 
 export function DecisionContinueOrStudy() {
   return (
@@ -10,9 +11,11 @@ export function DecisionContinueOrStudy() {
           Que tal estudar um<br/> pouco antes de me<br/> ajudar?
         </h1>
 
-        <div className="size-20 bg-yellow-600 rounded-full flex justify-center items-center absolute top-24 left-0">
+        <Link 
+          to="/"
+          className="size-20 bg-yellow-600 rounded-full flex justify-center items-center absolute top-24 left-0">
           <ArrowLeft color="#394f21" size={60} />
-        </div>
+        </Link>
 
         <div className="flex flex-col gap-3 mt-10">
           <CustomLink to="/question" color="bg-yellow-600" title="Vamos lá!" />
