@@ -1,7 +1,7 @@
 import Heart from "../assets/heart.png";
 import Cogncoin from "../assets/cogncoin.png";
 import { QuestionOption } from "../components/QuestionOption";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { QuestionButton } from "../components/QuestionButton";
 import { questions } from "../constants/questions";
 
@@ -10,6 +10,7 @@ export function Question() {
   const [idCorrect, setIdCorrect] = useState('');
   const [selectedAnswerId, setSelectedAnswerId] = useState('');
   const [cogncoinsAmount, setCongncoinsAmount] = useState(0);
+  const [timer, setTimer] = useState(30);
 
   function getOrderLetter(index: number) {
     const letters = ['A', 'B', 'C', 'D'];
@@ -26,6 +27,20 @@ export function Question() {
       setCongncoinsAmount(prev => prev - 1);
     }
   }
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setTimer(prevTimer => {
+        if (prevTimer === 0) {
+          clearInterval(intervalId);
+          return prevTimer;
+        }
+        return prevTimer - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(intervalId); 
+  }, []); 
 
   return (
     <div className="p-2 md:p-0 my-0 mx-auto h-full w-full md:h-3/4 md:w-3/4 flex flex-col justify-between items-center">
@@ -49,7 +64,7 @@ export function Question() {
           <div />
 
           <div className="w-52 h-10 flex justify-center items-center bg-lime-900 rounded-xl">
-            <span className="text-white font-bold text-xl">30seg</span>
+            <span className="text-white font-bold text-xl">{`${timer}seg`}</span>
           </div>
         </div>
       </section>
