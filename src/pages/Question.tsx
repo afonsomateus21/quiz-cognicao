@@ -9,6 +9,7 @@ export function Question() {
   const [index, setIndex] = useState(0);
   const [idCorrect, setIdCorrect] = useState('');
   const [selectedAnswerId, setSelectedAnswerId] = useState('');
+  const [cogncoinsAmount, setCongncoinsAmount] = useState(0);
 
   function getOrderLetter(index: number) {
     const letters = ['A', 'B', 'C', 'D'];
@@ -19,8 +20,10 @@ export function Question() {
     setSelectedAnswerId(id);
     if (isCorrect) {
       setIdCorrect(id);
+      setCongncoinsAmount(prev => prev + 1);
     } else {
       setIdCorrect('');
+      setCongncoinsAmount(prev => prev - 1);
     }
   }
 
@@ -39,7 +42,7 @@ export function Question() {
           </div>
 
           <div className="bg-white h-14 rounded-xl flex justify-center items-center relative">
-            <span className="text-3xl text-lime-900 font-bold">3</span>
+            <span className="text-3xl text-lime-900 font-bold">{ cogncoinsAmount }</span>
             <img src={Cogncoin} className="size-32 absolute left-28" alt="Ilustração da Cogncoin, uma moeda do jogo" />
           </div>
 
