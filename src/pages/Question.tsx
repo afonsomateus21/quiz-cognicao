@@ -1,9 +1,12 @@
 import Heart from "../assets/lime-heart.png";
 import Cogncoin from "../assets/cogncoin.png";
 import { QuestionOption } from "../components/QuestionOption";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { QuestionButton } from "../components/QuestionButton";
 import { questions } from "../constants/questions";
+import theme from '../assets/theme.mp3';
+// @ts-ignore
+import useSound from 'use-sound';
 
 export function Question() {
   const [index, setIndex] = useState(0);
@@ -14,6 +17,13 @@ export function Question() {
   const [playerLives, setPlayerLives] = useState([
     Heart, Heart, Heart
   ]) 
+  const [playbackRate, setPlaybackRate] = useState(1);
+
+  const [play, { stop } ] = useSound(theme, {
+    playbackRate,
+    interrupt: true,
+  });
+  const stopRef = useRef<() => void>();
 
   function getOrderLetter(index: number) {
     const letters = ['A', 'B', 'C', 'D'];
@@ -32,7 +42,8 @@ export function Question() {
     if (isCorrect) {
       setIdCorrect(id);
       setCongncoinsAmount(prev => prev + 1);
-      setTimer(prev => prev + 5)
+      setTimer(prev => prev + 5);
+      setPlaybackRate(playbackRate - 0.1);
     } else {
       setIdCorrect('');
       setCongncoinsAmount(prev => prev - 1);
@@ -41,12 +52,26 @@ export function Question() {
   }
 
   useEffect(() => {
+    stopRef.current = stop;
+  }, [stop]);
+
+  useEffect(() => {
     const intervalId = setInterval(() => {
       setTimer(prevTimer => {
         if (prevTimer === 0) {
           clearInterval(intervalId);
+          if (stopRef.current) stopRef.current();
           return prevTimer;
         }
+
+        setPlaybackRate(prevRate => {
+          if (prevTimer <= 10) {
+            return prevRate + 0.1; 
+          } else {
+            return prevRate;
+          }
+        });
+
         return prevTimer - 1;
       });
     }, 1000);
@@ -61,11 +86,12 @@ export function Question() {
           <span className="text-2xl md:text-7xl font-bold text-white">{ index + 1 }</span>
         </div>
 
+        <button onClick={ play }>clique</button>
         <div className="grid grid-cols-2 items-center gap-8">
           <div className="flex">
             {
-              playerLives.map((playerLive) => (
-                <img className="size-8 md:size-12" src={playerLive} alt="Ilustração de um coração verde que representa uma vida" />
+              playerLives.map((playerLive, index) => (
+                <img key={index} className="size-8 md:size-12" src={playerLive} alt="Ilustração de um coração verde que representa uma vida" />
               ))
             }
           </div>

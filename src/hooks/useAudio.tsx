@@ -1,7 +1,10 @@
 import { ReactNode, createContext, useContext, useState } from "react";
+import theme from '../assets/theme.mp3';
+// @ts-ignore
+import useSound from 'use-sound';
 
 interface AudioContextData {
-  audio: HTMLAudioElement;
+  audio: any;
 }
 
 interface AudioProviderProps {
@@ -13,7 +16,7 @@ const AudioContext = createContext<AudioContextData>(
 );
 
 export function AudioProvider({ children }: AudioProviderProps) {
-  const [ audio ] = useState(new Audio("../assets/theme.mp3"));
+  const [ audio ] = useSound(theme);
   
   return (
     <AudioContext.Provider value={{ audio }}>

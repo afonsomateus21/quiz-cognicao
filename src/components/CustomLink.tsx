@@ -1,14 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, LinkProps } from "react-router-dom";
 
-interface CustomButtonProps {
+interface CustomButtonProps extends LinkProps {
   title: string;
   to: string;
   color: string;
 }
 
-export function CustomLink({ title, to, color } : CustomButtonProps) {
+export function CustomLink({ title, to, color, ...rest } : CustomButtonProps) {
   return (
-    <Link 
+    <Link
+      {...rest} 
       to={ to }
       className={`${color} w-60 h-14 rounded-full flex justify-center items-center`}
     >
