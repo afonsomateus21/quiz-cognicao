@@ -55,40 +55,40 @@ export function Question() {
   }, []); 
 
   return (
-    <div className="p-2 md:p-0 my-0 mx-auto h-full w-full md:h-3/4 md:w-3/4 flex flex-col justify-between items-center">
+    <div className="p-2 md:p-6 lg:p-2 my-0 mx-auto h-full w-full md:h-3/4 lg:w-3/4 flex flex-col justify-between items-center">
       <section className="w-full flex items-center justify-between">
-        <div className="bg-yellow-600 size-28 rounded-full flex justify-center items-center">
-          <span className="text-7xl font-bold text-white">{ index + 1 }</span>
+        <div className="bg-yellow-600 size-16 md:size-28 rounded-full flex justify-center items-center">
+          <span className="text-2xl md:text-7xl font-bold text-white">{ index + 1 }</span>
         </div>
 
         <div className="grid grid-cols-2 items-center gap-8">
           <div className="flex">
             {
               playerLives.map((playerLive) => (
-                <img className="size-12" src={playerLive} alt="Ilustração de um coração verde que representa uma vida" />
+                <img className="size-8 md:size-12" src={playerLive} alt="Ilustração de um coração verde que representa uma vida" />
               ))
             }
           </div>
 
-          <div className="bg-white h-14 rounded-xl flex justify-center items-center relative">
+          <div className="bg-white w-20 md:w-36 h-10 md:h-14 rounded-xl flex justify-start p-4 md:p-0 md:justify-center items-center relative">
             <span className="text-3xl text-lime-900 font-bold">{ cogncoinsAmount }</span>
-            <img src={Cogncoin} className="size-32 absolute left-28" alt="Ilustração da Cogncoin, uma moeda do jogo" />
+            <img src={Cogncoin} className="size-16 md:size-32 absolute left-14 md:left-28" alt="Ilustração da Cogncoin, uma moeda do jogo" />
           </div>
 
           <div />
 
-          <div className="w-52 h-10 flex justify-center items-center bg-lime-900 rounded-xl">
+          <div className="w-28 md:w-52 h-10 flex justify-center items-center bg-lime-900 rounded-xl">
             <span className="text-white font-bold text-xl">{`${timer}seg`}</span>
           </div>
         </div>
       </section>
 
       <section className="h-96 w-full flex flex-col justify-evenly">
-        <h1 className="text-2xl font-bold text-white text-center">
+        <h1 className="text-xl md:text-2xl font-bold text-white text-center">
           { questions[index].question } 
         </h1>
 
-        <div className="w-full mx-auto grid grid-cols-2 justify-items-center items-center justify-center mt-7 gap-5">
+        <div className="w-full md:mx-auto flex flex-col gap-2 md:grid md:grid-cols-1 lg:grid-cols-2 md:justify-items-center md:items-center md:justify-center md:mt-7 md:gap-5">
           {
             questions[index].answers.map((answer, index) => (
               <QuestionOption

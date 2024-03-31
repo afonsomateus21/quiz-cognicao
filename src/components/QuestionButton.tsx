@@ -8,7 +8,7 @@ export function QuestionButton({ title, ...rest } : QuestionButtonProps) {
   return (
     <button 
       {...rest}
-      className="w-56 h-16 bg-lime-900 flex justify-center items-center rounded-3xl"
+      className="w-36 md:w-56 h-16 bg-lime-900 flex justify-center items-center rounded-3xl"
     >
       <span className="text-white font-bold text-xl">{title}</span>
     </button>
