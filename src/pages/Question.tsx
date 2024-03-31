@@ -7,10 +7,21 @@ import { questions } from "../constants/questions";
 
 export function Question() {
   const [index, setIndex] = useState(0);
+  const [idCorrect, setIdCorrect] = useState('');
+  const [selectedAnswerId, setSelectedAnswerId] = useState('');
 
   function getOrderLetter(index: number) {
     const letters = ['A', 'B', 'C', 'D'];
     return letters[index];
+  }
+
+  function handleAnswer(isCorrect: boolean, id: string) {
+    setSelectedAnswerId(id);
+    if (isCorrect) {
+      setIdCorrect(id);
+    } else {
+      setIdCorrect('');
+    }
   }
 
   return (
@@ -46,36 +57,16 @@ export function Question() {
         </h1>
 
         <div className="w-full mx-auto grid grid-cols-2 justify-items-center items-center justify-center mt-7 gap-5">
-          {/* <QuestionOption 
-            onClick={() => console.log('hello')}
-            question="Condicionamento clássico" 
-            order="A" 
-          />
-
-          <QuestionOption 
-            onClick={() => console.log('hello')}
-            question="Condicionamento clássico" 
-            order="A" 
-          />
-
-          <QuestionOption 
-            onClick={() => console.log('hello')}
-            question="Condicionamento clássico" 
-            order="A" 
-          />
-
-          <QuestionOption 
-            onClick={() => console.log('hello')}
-            question="Condicionamento clássico" 
-            order="A" 
-          /> */}
-
           {
             questions[index].answers.map((answer, index) => (
-              <QuestionOption 
-                onClick={() => console.log(answer.isCorrect)}
+              <QuestionOption
+                key={answer.answerId} 
+                onClick={() => {
+                  handleAnswer(answer.isCorrect, answer.answerId)
+                }}
                 question={answer.text} 
                 order={getOrderLetter(index)}
+                backgroundColor={ selectedAnswerId === answer.answerId ? (answer.isCorrect ? 'bg-lime-900' : 'bg-red-500') : 'bg-white' }
               />
             ))
           }
