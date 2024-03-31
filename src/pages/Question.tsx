@@ -22,6 +22,7 @@ export function Question() {
     if (isCorrect) {
       setIdCorrect(id);
       setCongncoinsAmount(prev => prev + 1);
+      setTimer(prev => prev + 5)
     } else {
       setIdCorrect('');
       setCongncoinsAmount(prev => prev - 1);
