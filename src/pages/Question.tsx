@@ -1,4 +1,4 @@
-import Heart from "../assets/heart.png";
+import Heart from "../assets/lime-heart.png";
 import Cogncoin from "../assets/cogncoin.png";
 import { QuestionOption } from "../components/QuestionOption";
 import { useEffect, useState } from "react";
@@ -11,10 +11,20 @@ export function Question() {
   const [selectedAnswerId, setSelectedAnswerId] = useState('');
   const [cogncoinsAmount, setCongncoinsAmount] = useState(0);
   const [timer, setTimer] = useState(30);
+  const [playerLives, setPlayerLives] = useState([
+    Heart, Heart, Heart
+  ]) 
 
   function getOrderLetter(index: number) {
     const letters = ['A', 'B', 'C', 'D'];
     return letters[index];
+  }
+
+  function handleWasteLive() {
+    if (setPlayerLives.length > 0) {
+      const newArray = [...playerLives.slice(0, -1)];
+      setPlayerLives(newArray);
+    }
   }
 
   function handleAnswer(isCorrect: boolean, id: string) {
@@ -26,6 +36,7 @@ export function Question() {
     } else {
       setIdCorrect('');
       setCongncoinsAmount(prev => prev - 1);
+      handleWasteLive();
     }
   }
 
@@ -52,9 +63,11 @@ export function Question() {
 
         <div className="grid grid-cols-2 items-center gap-8">
           <div className="flex">
-            <img className="size-12" src={Heart} alt="Ilustração de um coração vermelho que representa uma vida" />
-            <img className="size-12" src={Heart} />
-            <img className="size-12" src={Heart} />
+            {
+              playerLives.map((playerLive) => (
+                <img className="size-12" src={playerLive} alt="Ilustração de um coração verde que representa uma vida" />
+              ))
+            }
           </div>
 
           <div className="bg-white h-14 rounded-xl flex justify-center items-center relative">
