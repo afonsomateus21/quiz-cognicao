@@ -1,4 +1,4 @@
-[
+export const questions = [
   {
     "questionId": "c84106b3-41ec-4c29-9c7d-f7c1a3e13a0c",
     "question": "Comportamento voluntário, que opera a partir de estímulos.' e 'Uma resposta não é causada por um único estímulo' são explicações importantes para determinar o conceito de:",
