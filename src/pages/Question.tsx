@@ -7,8 +7,10 @@ import { questions } from "../constants/questions";
 import theme from '../assets/theme.mp3';
 // @ts-ignore
 import useSound from 'use-sound';
+import { useNavigate } from "react-router-dom";
 
 export function Question() {
+  const navigate = useNavigate();
   const [index, setIndex] = useState(0);
   const [idCorrect, setIdCorrect] = useState('');
   const [selectedAnswerId, setSelectedAnswerId] = useState('');
@@ -54,6 +56,14 @@ export function Question() {
       setIdCorrect('');
       setCongncoinsAmount(prev => prev - 1);
       handleWasteLive();
+    }
+  }
+
+  function handleChangeQuestion() {
+    if (index < questions.length - 1) {
+      setIndex(prev => prev + 1)
+    } else {
+      if (stopRef.current) stopRef.current();
     }
   }
 
@@ -152,7 +162,7 @@ export function Question() {
             <QuestionButton title="Desistir" />
             <QuestionButton 
               title="Próxima" 
-              onClick={() => { setIndex(prev => prev + 1) }}
+              onClick={ handleChangeQuestion }
             />
           </section>
         </>
