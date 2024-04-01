@@ -36,6 +36,12 @@ export function Question() {
   function handleWasteLive() {
     if (setPlayerLives.length > 0) {
       const newArray = [...playerLives.slice(0, -1)];
+
+      if (newArray.length === 0) {
+        if (stopRef.current) stopRef.current();
+        return navigate("/game-over");
+      }
+
       setPlayerLives(newArray);
     }
   }
