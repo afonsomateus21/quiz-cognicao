@@ -10,6 +10,7 @@ import { DecisionContinueOrStudy } from './pages/DecisionContinueOrStudy.tsx';
 import { ReinforcementsDescription } from './pages/ReinforcementsDescription.tsx';
 import { PositiveReinforcement } from './pages/PositiveReinforcement.tsx';
 import { NegativeReinforcement } from './pages/NegativeReinforcement.tsx';
+import { GameOver } from './pages/GameOver.tsx';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
         path: "/questions",
         element: <Question />
       },
+      {
+        path: "/game-over",
+        element: <GameOver />
+      }
     ]
   }, 
   {
@@ -41,7 +46,7 @@ const router = createBrowserRouter([
   {
     path: "/reinforcements/negative-reinforcement",
     element: <NegativeReinforcement />
-  }
+  },
 ])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
