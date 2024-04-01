@@ -2,11 +2,8 @@ import { CustomLink } from "../components/CustomLink";
 import SeriousBrain from "../assets/serious-brain.png";
 import { ArrowLeft } from 'lucide-react';
 import { Link } from "react-router-dom";
-import { useAudio } from "../hooks/useAudio";
 
 export function DecisionContinueOrStudy() {
-  const { audio } = useAudio();
-
   return (
     <main className="bg-lime-900 h-screen flex flex-col justify-center">
       <div className="p-2 md:p-0 my-0 mx-auto h-full w-full md:h-3/4 md:w-3/4 flex flex-col justify-center md:gap-5 items-center relative">
@@ -21,8 +18,8 @@ export function DecisionContinueOrStudy() {
         </Link>
 
         <div className="flex flex-col gap-3 mt-10">
-          <CustomLink to="/reinforcements" color="bg-yellow-600" title="Vamos lá!" onClick={() => { audio.play() }} />
-          <CustomLink to="/question" color="bg-orange-600" title="Não, Brain, eu me garanto!" />
+          <CustomLink to="/reinforcements" color="bg-yellow-600" title="Vamos lá!" />
+          <CustomLink to="/questions" color="bg-orange-600" title="Não, Brain, eu me garanto!" />
         </div>
 
         <img 

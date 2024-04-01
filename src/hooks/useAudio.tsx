@@ -1,32 +1,41 @@
-import { ReactNode, createContext, useContext, useState } from "react";
-import theme from '../assets/theme.mp3';
+import React, { ReactNode, createContext, useContext, useState } from 'react';
 // @ts-ignore
 import useSound from 'use-sound';
 
-interface AudioContextData {
-  audio: any;
-}
+// Crie o contexto
+const AudioContext = createContext({
+  play: () => {},
+  stop: () => {},
+  startAudio: () => {},
+  stopAudio: () => {}
+});
+
+// Hook personalizado para acessar o contexto
+export const useAudio = () => useContext(AudioContext);
 
 interface AudioProviderProps {
-  children: ReactNode
+  children: ReactNode;
 }
 
-const AudioContext = createContext<AudioContextData>(
-  {} as AudioContextData
-);
+// Provedor do contexto
+export const AudioProvider = ({ children }: AudioProviderProps) => {
+  const [play, { stop }] = useSound('/caminho/do/arquivo/audio.mp3');
+  const [audioEnabled, setAudioEnabled] = useState(false);
 
-export function AudioProvider({ children }: AudioProviderProps) {
-  const [ audio ] = useSound(theme);
-  
+  // Função para iniciar o áudio
+  const startAudio = () => {
+    setAudioEnabled(true);
+  };
+
+  // Função para parar o áudio
+  const stopAudio = () => {
+    stop();
+    setAudioEnabled(false);
+  };
+
   return (
-    <AudioContext.Provider value={{ audio }}>
-      { children }
+    <AudioContext.Provider value={{ play, stop, startAudio, stopAudio }}>
+      {children}
     </AudioContext.Provider>
-  )
-}
-
-export function useAudio() {
-  const context = useContext(AudioContext);
-
-  return context;
-}
+  );
+};

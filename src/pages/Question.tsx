@@ -24,6 +24,7 @@ export function Question() {
     interrupt: true,
   });
   const stopRef = useRef<() => void>();
+  const [canStartGame, setCanStartGame] = useState(false);
 
   function getOrderLetter(index: number) {
     const letters = ['A', 'B', 'C', 'D'];
@@ -35,6 +36,11 @@ export function Question() {
       const newArray = [...playerLives.slice(0, -1)];
       setPlayerLives(newArray);
     }
+  }
+
+  function handleStartGame() {
+    play();
+    setCanStartGame(true);
   }
 
   function handleAnswer(isCorrect: boolean, id: string) {
@@ -56,37 +62,45 @@ export function Question() {
   }, [stop]);
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setTimer(prevTimer => {
-        if (prevTimer === 0) {
-          clearInterval(intervalId);
-          if (stopRef.current) stopRef.current();
-          return prevTimer;
-        }
-
-        setPlaybackRate(prevRate => {
-          if (prevTimer <= 10) {
-            return prevRate + 0.1; 
-          } else {
-            return prevRate;
+    if (canStartGame) {
+      const intervalId = setInterval(() => {
+        setTimer(prevTimer => {
+          if (prevTimer === 0) {
+            clearInterval(intervalId);
+            if (stopRef.current) stopRef.current();
+            return prevTimer;
           }
+  
+          setPlaybackRate(prevRate => {
+            if (prevTimer <= 10) {
+              return prevRate + 0.1; 
+            } else {
+              return prevRate;
+            }
+          });
+  
+          return prevTimer - 1;
         });
-
-        return prevTimer - 1;
-      });
-    }, 1000);
-
-    return () => clearInterval(intervalId); 
-  }, []); 
+      }, 1000);
+  
+      return () => clearInterval(intervalId);
+    } 
+  }, [canStartGame]); 
 
   return (
     <div className="p-2 md:p-6 lg:p-2 my-0 mx-auto h-full w-full md:h-3/4 lg:w-3/4 flex flex-col justify-between items-center">
       <section className="w-full flex items-center justify-between">
         <div className="bg-yellow-600 size-16 md:size-28 rounded-full flex justify-center items-center">
-          <span className="text-2xl md:text-7xl font-bold text-white">{ index + 1 }</span>
+          <span className="text-2xl md:text-7xl font-bold text-white">
+            {  
+              canStartGame ?
+                index + 1
+              :
+                ""
+            }
+          </span>
         </div>
 
-        <button onClick={ play }>clique</button>
         <div className="grid grid-cols-2 items-center gap-8">
           <div className="flex">
             {
@@ -109,35 +123,44 @@ export function Question() {
         </div>
       </section>
 
-      <section className="h-96 w-full flex flex-col justify-evenly">
-        <h1 className="text-xl md:text-2xl font-bold text-white text-center">
-          { questions[index].question } 
-        </h1>
+      {
+        canStartGame ? 
+        <>
+          <section className="h-96 w-full flex flex-col justify-evenly">
+            <h1 className="text-xl md:text-2xl font-bold text-white text-center">
+              { questions[index].question } 
+            </h1>
 
-        <div className="w-full md:mx-auto flex flex-col gap-2 md:grid md:grid-cols-1 lg:grid-cols-2 md:justify-items-center md:items-center md:justify-center md:mt-7 md:gap-5">
-          {
-            questions[index].answers.map((answer, index) => (
-              <QuestionOption
-                key={answer.answerId} 
-                onClick={() => {
-                  handleAnswer(answer.isCorrect, answer.answerId)
-                }}
-                question={answer.text} 
-                order={getOrderLetter(index)}
-                backgroundColor={ selectedAnswerId === answer.answerId ? (answer.isCorrect ? 'bg-lime-900' : 'bg-red-500') : 'bg-white' }
-              />
-            ))
-          }
-        </div>
-      </section>
+            <div className="w-full md:mx-auto flex flex-col gap-2 md:grid md:grid-cols-1 lg:grid-cols-2 md:justify-items-center md:items-center md:justify-center md:mt-7 md:gap-5">
+              {
+                questions[index].answers.map((answer, index) => (
+                  <QuestionOption
+                    key={answer.answerId} 
+                    onClick={() => {
+                      handleAnswer(answer.isCorrect, answer.answerId)
+                    }}
+                    question={answer.text} 
+                    order={getOrderLetter(index)}
+                    backgroundColor={ selectedAnswerId === answer.answerId ? (answer.isCorrect ? 'bg-lime-900' : 'bg-red-500') : 'bg-white' }
+                  />
+                ))
+              }
+            </div>
+          </section>
 
-      <section className="w-full flex justify-between">
-        <QuestionButton title="Desistir" />
-        <QuestionButton 
-          title="Próxima" 
-          onClick={() => { setIndex(prev => prev + 1) }}
-        />
-      </section>
+          <section className="w-full flex justify-between">
+            <QuestionButton title="Desistir" />
+            <QuestionButton 
+              title="Próxima" 
+              onClick={() => { setIndex(prev => prev + 1) }}
+            />
+          </section>
+        </>
+        :
+        <section className="flex-1 w-full flex justify-center items-center">
+          <QuestionButton title="Começar" onClick={ handleStartGame } />
+        </section>     
+      }
     </div>
   );
 }
