@@ -11,6 +11,7 @@ import { ReinforcementsDescription } from './pages/ReinforcementsDescription.tsx
 import { PositiveReinforcement } from './pages/PositiveReinforcement.tsx';
 import { NegativeReinforcement } from './pages/NegativeReinforcement.tsx';
 import { GameOver } from './pages/GameOver.tsx';
+import { PlayerProvider } from './hooks/usePlayer.tsx';
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <PlayerProvider>
+      <RouterProvider router={router} />
+    </PlayerProvider>
   </React.StrictMode>,
 )

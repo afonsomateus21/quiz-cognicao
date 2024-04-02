@@ -8,17 +8,19 @@ import theme from '../assets/theme.mp3';
 // @ts-ignore
 import useSound from 'use-sound';
 import { useNavigate } from "react-router-dom";
+import { usePlayer } from "../hooks/usePlayer";
 
 export function Question() {
   const navigate = useNavigate();
   const [index, setIndex] = useState(0);
   const [idCorrect, setIdCorrect] = useState('');
   const [selectedAnswerId, setSelectedAnswerId] = useState('');
-  const [cogncoinsAmount, setCongncoinsAmount] = useState(0);
+  // const [cogncoinsAmount, setCongncoinsAmount] = useState(0);
   const [timer, setTimer] = useState(30);
-  const [playerLives, setPlayerLives] = useState([
-    Heart, Heart, Heart
-  ]) 
+  // const [playerLives, setPlayerLives] = useState([
+  //   Heart, Heart, Heart
+  // ]) 
+  const { playerLives, cogncoinsAmount, setPlayerLives, handleGainCognCoins, handleLoseCognCoins } = usePlayer();
   const [playbackRate, setPlaybackRate] = useState(1);
 
   const [play, { stop } ] = useSound(theme, {
@@ -57,20 +59,12 @@ export function Question() {
     setWasAnswered(true);
     if (isCorrect) {
       setIdCorrect(id);
-      setCongncoinsAmount(prev => prev + 1);
+      handleGainCognCoins();
       setTimer(prev => prev + 5);
       setPlaybackRate(playbackRate - 0.1);
     } else {
       setIdCorrect('');
-      setCongncoinsAmount(
-        prev => {
-          if (prev == 0) {
-            return prev;
-          }
-
-          return prev - 1
-        }
-      );
+      handleLoseCognCoins();
       handleWasteLive();
     }
   }
@@ -98,7 +92,10 @@ export function Question() {
         setTimer(prevTimer => {
           if (prevTimer === 0) {
             clearInterval(intervalId);
-            if (stopRef.current) stopRef.current();
+            if (stopRef.current) {
+              stopRef.current();
+              navigate("/game-over")
+            }
             return prevTimer;
           }
   

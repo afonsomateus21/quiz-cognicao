@@ -1,8 +1,11 @@
 import SadBrain from "../assets/sad-brain.png";
 import CognCoin from "../assets/cogncoin.png";
 import { CustomLink } from "../components/CustomLink";
+import { usePlayer } from "../hooks/usePlayer";
 
 export function GameOver() {
+  const { cogncoinsAmount } = usePlayer();
+
   return (
     <div className="p-2 md:p-6 lg:p-2 my-0 mx-auto h-full w-full md:h-3/4 lg:w-3/4 flex flex-col md:flex-row justify-evenly items-center">
       <div className="bg-lime-900 px-3 rounded-3xl">
@@ -22,7 +25,7 @@ export function GameOver() {
         </div>
 
         <div className="w-80 h-16 md:h-20 bg-lime-900 rounded-full flex justify-between items-center p-5">
-          <span className="text-3xl font-bold text-white">0 CognCoins</span>
+          <span className="text-3xl font-bold text-white">{ cogncoinsAmount } CognCoins</span>
           <img className="size-16 " src={ CognCoin } alt="Ilustração do CognCoin" />
         </div>
 
