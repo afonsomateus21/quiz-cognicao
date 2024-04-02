@@ -1,11 +1,12 @@
-import { ReactNode, createContext, useState } from "react";
+import { ReactNode, createContext, useContext, useState } from "react";
 import Heart from "../assets/lime-heart.png";
 
 interface PlayerContextData {
   playerLives: string[];
   cogncoinsAmount: number;
   setPlayerLives: (playerLives: string[]) => void;
-  setCongncoinsAmount: (cogncoinsAmount: number) => void;
+  handleGainCognCoins: () => void;
+  handleLoseCognCoins: () => void;
 }
 
 interface PlayerProviderProps {
@@ -23,9 +24,31 @@ export function PlayerProvider({ children }: PlayerProviderProps) {
   
   const [cogncoinsAmount, setCongncoinsAmount] = useState(0);
 
+  function handleGainCognCoins() {
+    setCongncoinsAmount(prev  => prev + 1);
+  }
+
+  function handleLoseCognCoins() {
+    setCongncoinsAmount(
+      prev => {
+        if (prev == 0) {
+          return prev;
+        }
+
+        return prev - 1
+      }
+    );
+  }
+
   return (
-    <PlayerContext.Provider value={{ playerLives, cogncoinsAmount, setPlayerLives, setCongncoinsAmount  }}>
+    <PlayerContext.Provider value={{ playerLives, cogncoinsAmount, setPlayerLives, handleGainCognCoins, handleLoseCognCoins }}>
       { children }
     </PlayerContext.Provider>
   )
+}
+
+export function usePlayer() {
+  const context = useContext(PlayerContext);
+
+  return context;
 }
