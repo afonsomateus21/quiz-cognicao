@@ -13,6 +13,7 @@ import { NegativeReinforcement } from './pages/NegativeReinforcement.tsx';
 import { GameOver } from './pages/GameOver.tsx';
 import { PlayerProvider } from './hooks/usePlayer.tsx';
 import { GameWinner } from './pages/GameWinner.tsx';
+import { About } from './pages/About.tsx';
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
   {
     path: "/game-winner",
     element: <GameWinner />
+  },
+  {
+    path: "/about",
+    element: <About />
   }
 ])
 
