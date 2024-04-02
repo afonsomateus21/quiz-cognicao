@@ -60,7 +60,15 @@ export function Question() {
       setPlaybackRate(playbackRate - 0.1);
     } else {
       setIdCorrect('');
-      setCongncoinsAmount(prev => prev - 1);
+      setCongncoinsAmount(
+        prev => {
+          if (prev == 0) {
+            return prev;
+          }
+
+          return prev - 1
+        }
+      );
       handleWasteLive();
     }
   }
