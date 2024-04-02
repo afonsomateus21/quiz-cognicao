@@ -27,6 +27,7 @@ export function Question() {
   });
   const stopRef = useRef<() => void>();
   const [canStartGame, setCanStartGame] = useState(false);
+  const [ wasAnswered, setWasAnswered ] = useState(false);
 
   function getOrderLetter(index: number) {
     const letters = ['A', 'B', 'C', 'D'];
@@ -53,6 +54,7 @@ export function Question() {
 
   function handleAnswer(isCorrect: boolean, id: string) {
     setSelectedAnswerId(id);
+    setWasAnswered(true);
     if (isCorrect) {
       setIdCorrect(id);
       setCongncoinsAmount(prev => prev + 1);
@@ -73,9 +75,14 @@ export function Question() {
     }
   }
 
+  useEffect(() => {
+    console.log(wasAnswered)
+  }, [wasAnswered])
+
   function handleChangeQuestion() {
     if (index < questions.length - 1) {
-      setIndex(prev => prev + 1)
+      setIndex(prev => prev + 1);
+      setWasAnswered(false);
     } else {
       if (stopRef.current) stopRef.current();
     }
@@ -159,11 +166,13 @@ export function Question() {
               {
                 questions[index].answers.map((answer, index) => (
                   <QuestionOption
+                    className={`${wasAnswered ? 'cursor-none' : 'cursor-pointer'}`}
                     key={answer.answerId} 
                     onClick={() => {
                       handleAnswer(answer.isCorrect, answer.answerId)
                     }}
                     question={answer.text} 
+                    wasAnswered={wasAnswered}
                     order={getOrderLetter(index)}
                     backgroundColor={ selectedAnswerId === answer.answerId ? (answer.isCorrect ? 'bg-lime-900' : 'bg-red-500') : 'bg-white' }
                   />
