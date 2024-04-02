@@ -19,17 +19,20 @@ export function Home() {
       </div>
       
       <div className="w-full lg:w-4/5 flex flex-col md:flex-row md:justify-evenly gap-2 md:gap-0">
-        <ActionButton 
+        <ActionButton
+          to="/reinforcements"
           title="Estude aqui" 
           icon={ <Play color="white" /> } 
         />
 
         <ActionButton 
+          to="/about"
           title="Sobre" 
           icon={ <SearchSlash color="white" /> } 
         />
 
-        <ActionButton 
+        <ActionButton
+          to="/creditos" 
           title="Créditos" 
           icon={ <BookUser color="white" /> } 
         />
