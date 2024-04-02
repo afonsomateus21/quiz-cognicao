@@ -12,6 +12,7 @@ import { PositiveReinforcement } from './pages/PositiveReinforcement.tsx';
 import { NegativeReinforcement } from './pages/NegativeReinforcement.tsx';
 import { GameOver } from './pages/GameOver.tsx';
 import { PlayerProvider } from './hooks/usePlayer.tsx';
+import { GameWinner } from './pages/GameWinner.tsx';
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
     path: "/reinforcements/negative-reinforcement",
     element: <NegativeReinforcement />
   },
+  {
+    path: "/game-winner",
+    element: <GameWinner />
+  }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
