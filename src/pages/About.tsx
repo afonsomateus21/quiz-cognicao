@@ -1,10 +1,11 @@
 import SeriousBrain from "../assets/serious-brain.png";
+import { CustomLink } from "../components/CustomLink";
 
 export function About() {
   return (
     <main className="bg-yellow-600 min-h-screen flex flex-col justify-center relative overflow-hidden">
       <div className="p-2 md:p-6 lg:p-0 my-0 ml-auto h-full w-full md:h-[90%] lg:w-[90%] flex flex-col justify-center gap-6 overflow-y-auto">
-        <div className="w-full">
+        <div className="w-full flex">
           <h1 className="text-white font-bold text-2xl md:text-6xl text-left">
             Olá, <span className="text-lime-900">cognauta</span>!
           </h1>
@@ -49,6 +50,14 @@ export function About() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="absolute right-3 md:right-16 top-12 md:top-24 lg:top-36">
+        <CustomLink 
+          to="/"
+          title="Voltar"
+          color="bg-orange-600"
+        />
       </div>
 
       <div className="h-[600px] hidden md:block lg:w-12 bg-orange-600 rounded-r-[30px] absolute" />
