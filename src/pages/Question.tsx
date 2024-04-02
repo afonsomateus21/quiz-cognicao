@@ -79,6 +79,12 @@ export function Question() {
       setWasAnswered(false);
     } else {
       if (stopRef.current) stopRef.current();
+
+      if (playerLives.length > 0) {
+        return navigate("/game-winner");
+      } else {
+        return navigate("/game-over");
+      }
     }
   }
 
