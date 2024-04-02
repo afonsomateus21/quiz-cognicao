@@ -1,13 +1,14 @@
-import { ButtonHTMLAttributes, ReactNode } from "react";
+import { ReactNode } from "react";
+import { Link, LinkProps } from "react-router-dom";
 
-interface ActionButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ActionButtonProps extends LinkProps {
   title: string;
   icon: ReactNode;
 }
 
 export function ActionButton({ title, icon, ...rest }: ActionButtonProps) {
   return (
-    <button 
+    <Link 
       {...rest} 
       className="w-full md:w-48 lg:w-56 py-3 px-2 bg-white flex items-center rounded-3xl"
     >
@@ -15,6 +16,6 @@ export function ActionButton({ title, icon, ...rest }: ActionButtonProps) {
         <span>{ icon }</span>
       </div>
       <span className="text-lime-900">{ title }</span>
-    </button>
+    </Link>
   );
 }
