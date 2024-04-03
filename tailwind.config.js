@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'tb': '1024px'
+      },
       colors: {
         orange: {
           600: '#d15404'
