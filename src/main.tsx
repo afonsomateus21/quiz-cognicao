@@ -14,6 +14,7 @@ import { GameOver } from './pages/GameOver.tsx';
 import { PlayerProvider } from './hooks/usePlayer.tsx';
 import { GameWinner } from './pages/GameWinner.tsx';
 import { About } from './pages/About.tsx';
+import { CreditsAndReference } from './pages/CreditsAndReference.tsx';
 
 const router = createBrowserRouter([
   {
@@ -57,6 +58,10 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <About />
+  },
+  {
+    path: "/credits",
+    element: <CreditsAndReference />
   }
 ])
 

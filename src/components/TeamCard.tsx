@@ -12,7 +12,7 @@ export function TeamCard({ name, url } : TeamCardProps) {
       />
       
       <div className="flex-1">
-        <span className="text-lime-900 font-bold text-xl">
+        <span className="text-lime-900 font-bold text-lg">
           { name }
         </span>
       </div>
