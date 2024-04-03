@@ -31,7 +31,7 @@ export function GameOver() {
 
         <div className="w-full flex flex-col md:flex-row items-center md:justify-between gap-3 md:gap-0">
           <CustomLink color="bg-yellow-600" title="Início" to="/" />
-          <CustomLink color="bg-lime-900" title="Estudar..." to="/" />
+          <CustomLink color="bg-lime-900" title="Estudar..." to="/reinforcements" />
         </div>
       </div>
     </div>

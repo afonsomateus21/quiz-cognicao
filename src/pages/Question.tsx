@@ -15,11 +15,7 @@ export function Question() {
   const [index, setIndex] = useState(0);
   const [idCorrect, setIdCorrect] = useState('');
   const [selectedAnswerId, setSelectedAnswerId] = useState('');
-  // const [cogncoinsAmount, setCongncoinsAmount] = useState(0);
   const [timer, setTimer] = useState(30);
-  // const [playerLives, setPlayerLives] = useState([
-  //   Heart, Heart, Heart
-  // ]) 
   const { playerLives, cogncoinsAmount, setPlayerLives, handleGainCognCoins, handleLoseCognCoins } = usePlayer();
   const [playbackRate, setPlaybackRate] = useState(1);
 
