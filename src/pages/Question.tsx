@@ -15,7 +15,14 @@ export function Question() {
   const [idCorrect, setIdCorrect] = useState('');
   const [selectedAnswerId, setSelectedAnswerId] = useState('');
   const [timer, setTimer] = useState(30);
-  const { playerLives, cogncoinsAmount, setPlayerLives, handleGainCognCoins, handleLoseCognCoins } = usePlayer();
+  const { 
+    playerLives, 
+    cogncoinsAmount, 
+    setPlayerLives,
+    resetPlayerLivesAndCoins, 
+    handleGainCognCoins, 
+    handleLoseCognCoins 
+  } = usePlayer();
   const [playbackRate, setPlaybackRate] = useState(1);
 
   const [play, { stop } ] = useSound(theme, {
@@ -76,6 +83,7 @@ export function Question() {
       if (playerLives.length > 0) {
         return navigate("/game-winner");
       } else {
+        resetPlayerLivesAndCoins();
         return navigate("/game-over");
       }
     }
@@ -86,6 +94,7 @@ export function Question() {
       stopRef.current();
     }
 
+    resetPlayerLivesAndCoins();
     return navigate("/game-over");
   }
 
@@ -101,6 +110,7 @@ export function Question() {
             clearInterval(intervalId);
             if (stopRef.current) {
               stopRef.current();
+              resetPlayerLivesAndCoins();
               navigate("/game-over")
             }
             return prevTimer;

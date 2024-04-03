@@ -4,8 +4,16 @@ import { StartGameCard } from "../components/StartGameCard";
 import { IllustrationCard } from "../components/IllustrationCard";
 import GrennBrain from "../assets/brain-green.png";
 import YellowBrain from "../assets/brain-yellow.png";
+import { usePlayer } from "../hooks/usePlayer";
+import { useEffect } from "react";
 
 export function Home() {
+  const { resetPlayerLivesAndCoins  } = usePlayer();
+
+  useEffect(() => {
+    resetPlayerLivesAndCoins();
+  }, [])
+
   return (
     <div className="p-2 md:p-0 my-0 mx-auto h-full w-full md:h-3/4 md:w-3/4 flex flex-col justify-between items-center">
       <h1 className="font-roboto font-bold text-3xl md:text-5xl text-center text-white">Behaviorismo?</h1>

@@ -5,8 +5,10 @@ interface PlayerContextData {
   playerLives: string[];
   cogncoinsAmount: number;
   setPlayerLives: (playerLives: string[]) => void;
+  setCogncoinsAmount: (cogncoinsAmount: number) => void;
   handleGainCognCoins: () => void;
   handleLoseCognCoins: () => void;
+  resetPlayerLivesAndCoins: () => void;
 }
 
 interface PlayerProviderProps {
@@ -22,14 +24,14 @@ export function PlayerProvider({ children }: PlayerProviderProps) {
     Heart, Heart, Heart
   ]);
   
-  const [cogncoinsAmount, setCongncoinsAmount] = useState(0);
+  const [cogncoinsAmount, setCogncoinsAmount] = useState(0);
 
   function handleGainCognCoins() {
-    setCongncoinsAmount(prev  => prev + 1);
+    setCogncoinsAmount(prev  => prev + 1);
   }
 
   function handleLoseCognCoins() {
-    setCongncoinsAmount(
+    setCogncoinsAmount(
       prev => {
         if (prev == 0) {
           return prev;
@@ -40,8 +42,22 @@ export function PlayerProvider({ children }: PlayerProviderProps) {
     );
   }
 
+  function resetPlayerLivesAndCoins() {
+    setCogncoinsAmount(0);
+    setPlayerLives([ Heart, Heart, Heart ]);
+  }
+
   return (
-    <PlayerContext.Provider value={{ playerLives, cogncoinsAmount, setPlayerLives, handleGainCognCoins, handleLoseCognCoins }}>
+    <PlayerContext.Provider 
+      value={{ 
+        playerLives, 
+        cogncoinsAmount, 
+        setCogncoinsAmount, 
+        setPlayerLives, 
+        handleGainCognCoins, 
+        handleLoseCognCoins,
+        resetPlayerLivesAndCoins 
+      }}>
       { children }
     </PlayerContext.Provider>
   )
