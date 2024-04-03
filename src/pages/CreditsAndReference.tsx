@@ -1,5 +1,4 @@
 import { ArrowLeft } from "lucide-react";
-import { CustomLink } from "../components/CustomLink";
 import { NavArrowButton } from "../components/NavArrowButton";
 import { ReferencesCard } from "../components/ReferencesCard";
 import { TeamCard } from "../components/TeamCard";

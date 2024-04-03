@@ -1,4 +1,3 @@
-import Heart from "../assets/lime-heart.png";
 import Cogncoin from "../assets/cogncoin.png";
 import { QuestionOption } from "../components/QuestionOption";
 import { useEffect, useRef, useState } from "react";
@@ -54,6 +53,7 @@ export function Question() {
     setSelectedAnswerId(id);
     setWasAnswered(true);
     if (isCorrect) {
+      console.log(idCorrect);
       setIdCorrect(id);
       handleGainCognCoins();
       setTimer(prev => prev + 5);
@@ -65,9 +65,6 @@ export function Question() {
     }
   }
 
-  useEffect(() => {
-    console.log(wasAnswered)
-  }, [wasAnswered])
 
   function handleChangeQuestion() {
     if (index < questions.length - 1) {
