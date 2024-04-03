@@ -88,6 +88,14 @@ export function Question() {
     }
   }
 
+  function handleGiveUp() {
+    if (stopRef.current) {
+      stopRef.current();
+    }
+
+    return navigate("/game-over");
+  }
+
   useEffect(() => {
     stopRef.current = stop;
   }, [stop]);
@@ -185,7 +193,10 @@ export function Question() {
           </section>
 
           <section className="w-full flex justify-between">
-            <QuestionButton title="Desistir" />
+            <QuestionButton 
+              title="Desistir"
+              onClickCapture={ handleGiveUp } 
+            />
             <QuestionButton 
               title="Próxima" 
               onClick={ handleChangeQuestion }
