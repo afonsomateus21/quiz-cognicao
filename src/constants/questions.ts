@@ -6,12 +6,12 @@ export const questions = [
       { 
         "answerId": "c544b921-d4a2-4a7c-af0b-226fdd208c29", 
         "text": "Condicionamento clássico",
-        "isCorrect": true 
+        "isCorrect": false 
       },
       { 
         "answerId": "81fb8f40-227f-4b6c-a2e7-560ab9287699", 
         "text": "Condicionamento operante",
-        "isCorrect": false 
+        "isCorrect": true 
       },
       { 
         "answerId": "7922da0d-30a5-45b5-8fa7-6071d5456b14", 

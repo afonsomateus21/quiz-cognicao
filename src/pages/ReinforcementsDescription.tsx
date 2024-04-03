@@ -46,13 +46,17 @@ export function ReinforcementsDescription() {
           title="Reforço Negativo"
           text="Remove-se o estímulo quando aumenta a frequência de uma resposta. Envolvem a remoção de eventos ou resultados desfavoráveis após a exibição de um comportamento. Nessas situações, uma resposta é fortalecida pela remoção de algo considerado desagradável."
           children={
-            <CustomLink to="/question" color="bg-lime-900" title="Quero saber mais!" />
+            <CustomLink 
+              to="/reinforcements/negative-reinforcement" 
+              color="bg-lime-900" 
+              title="Quero saber mais!" 
+            />
           } 
         />
 
         <div className="w-full flex flex-col md:flex-row gap-2 md:gap-0 items-center md:justify-between">
           <CustomLink to="/" color="bg-orange-600" title="Início!" />
-          <CustomLink to="/question" color="bg-lime-900" title="Vamos lá!" />
+          <CustomLink to="/questions" color="bg-lime-900" title="Vamos lá!" />
         </div>
       </div>
     </main>
