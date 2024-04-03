@@ -32,7 +32,7 @@ export function Home() {
         />
 
         <ActionButton
-          to="/creditos" 
+          to="/credits" 
           title="Créditos" 
           icon={ <BookUser color="white" /> } 
         />

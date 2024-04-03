@@ -27,61 +27,30 @@ export function NegativeReinforcement() {
         <section className="h-4/5 flex flex-col justify-center  bg-yellow-600 rounded-3xl p-3 md:p-8">
           <div className="p-2 md:p-4 overflow-scroll overflow-y-scroll h-[95%] md:h-4/5 overflow-x-hidden">
             <p className="text-justify text-md text-white font-roboto">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-              when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-              It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-              It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-              and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-              when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-              It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-              It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-              and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-              when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-              It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-              It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-              and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-              when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-              It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-              It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-              and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-              when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-              It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-              It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-              and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-              when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-              It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-              It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-              and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-              when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-              It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-              It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-              and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-              when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-              It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-              It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-              and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-              when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-              It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-              It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-              and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              O reforço negativo, uma das principais concepções do condicionamento operante proposto por B.F. 
+              Skinner, representa uma forma de modificação de comportamento na qual a frequência de um comportamento 
+              desejado é aumentada pela remoção ou redução de um estímulo aversivo ou desagradável após a realização 
+              desse comportamento. Em outras palavras, o reforço negativo envolve a eliminação de uma consequência 
+              indesejada como resultado da realização do comportamento desejado, o que fortalece a probabilidade de 
+              que o comportamento seja repetido no futuro.
+              Um exemplo clássico de reforço negativo é quando um condutor de um veículo para de tocar uma buzina 
+              irritante assim que o passageiro coloca o cinto de segurança. Neste caso, a remoção do som desagradável 
+              da buzina serve como uma consequência reforçadora para a ação de colocar o cinto de segurança, 
+              tornando mais provável que o passageiro repita esse comportamento no futuro para evitar a buzina.
+              É importante destacar que o reforço negativo não envolve punição ou consequências adversas pelo 
+              comportamento indesejado, mas sim a remoção de um estímulo aversivo como consequência do comportamento 
+              desejado. Isso significa que o objetivo do reforço negativo não é apenas suprimir um comportamento 
+              indesejado, mas sim incentivar a ocorrência de um comportamento alternativo que leve à eliminação do 
+              estímulo aversivo.
+              O reforço negativo pode assumir diversas formas, desde a remoção de dor física ou desconforto até a 
+              eliminação de pressões sociais ou responsabilidades. Por exemplo, um estudante pode evitar uma punição 
+              (estímulo aversivo) como resultado da entrega de uma tarefa no prazo (comportamento desejado), o que 
+              reforça a probabilidade de que ele continue entregando tarefas no prazo no futuro.
+              Ao utilizar o reforço negativo de forma adequada e consistente, é possível promover comportamentos 
+              desejados, fortalecer habilidades e estabelecer padrões de conduta positivos em uma variedade de 
+              contextos, incluindo educação, treinamento de animais, gestão de equipes e terapia comportamental. 
+              No entanto, é essencial garantir que o reforço negativo seja aplicado de maneira ética e responsável, 
+              respeitando sempre o bem-estar e a dignidade dos indivíduos envolvidos.
             </p>
           </div>
         </section>

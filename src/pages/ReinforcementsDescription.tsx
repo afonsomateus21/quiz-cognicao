@@ -29,14 +29,22 @@ export function ReinforcementsDescription() {
         </span>
 
         <ReinforcementDescriptionCard 
-          color="bg-lime-900" 
+          color="bg-lime-900"
+          title="Reforço Positivo" 
+          text="O reforço positivo fortalece uma resposta quando se apresenta um estímulo. São eventos ou resultados favoráveis que são apresentados após o comportamento."
           children={
-            <CustomLink to="/reinforcements/positive-reinforcement" color="bg-orange-600" title="Quero saber mais!" />
+            <CustomLink 
+              to="/reinforcements/positive-reinforcement" 
+              color="bg-orange-600" 
+              title="Quero saber mais!" 
+            />
           } 
         />
 
         <ReinforcementDescriptionCard 
           color="bg-orange-600" 
+          title="Reforço Negativo"
+          text="Remove-se o estímulo quando aumenta a frequência de uma resposta. Envolvem a remoção de eventos ou resultados desfavoráveis após a exibição de um comportamento. Nessas situações, uma resposta é fortalecida pela remoção de algo considerado desagradável."
           children={
             <CustomLink to="/question" color="bg-lime-900" title="Quero saber mais!" />
           } 
