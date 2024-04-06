@@ -9,9 +9,22 @@ import useSound from 'use-sound';
 import { useNavigate } from "react-router-dom";
 import { usePlayer } from "../hooks/usePlayer";
 
+type AnswersType = {
+  answerId: string;
+  text: string;
+  isCorrect: boolean;
+}
+
+type QuestionsType = {
+  questionId: string;
+  question: string;
+  answers: AnswersType[];
+}
+
 export function Question() {
   const navigate = useNavigate();
   const [index, setIndex] = useState(0);
+  const [shuffledQuestions, setShuffledQuestions] = useState<QuestionsType[]>([]);
   const [idCorrect, setIdCorrect] = useState('');
   const [selectedAnswerId, setSelectedAnswerId] = useState('');
   const [timer, setTimer] = useState(30);
@@ -56,6 +69,26 @@ export function Question() {
     setCanStartGame(true);
   }
 
+  function shuffleArray<T>(array: T[]): T[]  {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+
+  useEffect(() => {
+    const shuffledQuestionsCopy = [...questions];
+    const shuffledQuestionsResult = shuffleArray(shuffledQuestionsCopy);
+    
+    const shuffledQuestionsWithShuffledAnswers = shuffledQuestionsResult.map(question => ({
+      ...question,
+      answers: shuffleArray(question.answers)
+    }));
+    
+    setShuffledQuestions(shuffledQuestionsWithShuffledAnswers);
+  }, []);
+
   function handleAnswer(isCorrect: boolean, id: string) {
     setSelectedAnswerId(id);
     setWasAnswered(true);
@@ -71,7 +104,6 @@ export function Question() {
       handleWasteLive();
     }
   }
-
 
   function handleChangeQuestion() {
     if (!wasAnswered) {
@@ -182,7 +214,7 @@ export function Question() {
 
             <div className="w-full md:mx-auto flex flex-col gap-2 md:grid md:grid-cols-1 lg:grid-cols-2 md:justify-items-center md:items-center md:justify-center md:mt-7 md:gap-5">
               {
-                questions[index].answers.map((answer, index) => (
+                shuffledQuestions[index].answers.map((answer, index) => (
                   <QuestionOption
                     className={`${wasAnswered ? 'cursor-none' : 'cursor-pointer'}`}
                     key={answer.answerId} 
