@@ -74,6 +74,10 @@ export function Question() {
 
 
   function handleChangeQuestion() {
+    if (!wasAnswered) {
+      return;
+    }
+
     if (index < questions.length - 1) {
       setIndex(prev => prev + 1);
       setWasAnswered(false);
