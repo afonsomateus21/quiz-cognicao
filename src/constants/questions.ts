@@ -26,32 +26,6 @@ export const questions = [
     ]
   },
   {
-    "questionId": "7fc7bcfd-d72b-4c65-b6b7-8a8b0a0d2e64",
-    "question": "Qual o nome do tipo de consequência ao comportamento que diminui a probabilidade de um determinado comportamento voltar a acontecer.",
-    "answers": [
-      { 
-        "answerId": "55e3d6fc-4f8d-4141-bd95-03f6a7c5e860", 
-        "text": "Reforço",
-        "isCorrect": false 
-      },
-      { 
-        "answerId": "76b40e5a-84f2-48da-a4c1-670f3a5220a0", 
-        "text": "Auxílio",
-        "isCorrect": false 
-      },
-      { 
-        "answerId": "d349c999-f9e5-45ef-a389-1aaf9f3a6e57", 
-        "text": "Punição",
-        "isCorrect": true 
-      },
-      { 
-        "answerId": "edba4a41-7696-4580-b2a8-71b5e792bb0c", 
-        "text": "Correção",
-        "isCorrect": false 
-      }
-    ]
-  },
-  {
     "questionId": "2af89141-8653-4b54-8926-47b8a7b146e3",
     "question": "Qual o tipo de consequência do comportamento que aumenta a probabilidade de um determinado comportamento voltar a acontecer.",
     "answers": [
@@ -104,58 +78,6 @@ export const questions = [
     ]
   },
   {
-    "questionId": "6372bfc1-14cb-47a7-98f2-24b8bdf1755e",
-    "question": "Como chamamos quando um elemento aversivo é apresentado após a realização de um comportamento não desejado?",
-    "answers": [
-      { 
-        "answerId": "2eb2cd47-227d-47b8-9ba7-eb5ac6e122a5", 
-        "text": "Reforço positivo",
-        "isCorrect": false 
-      },
-      { 
-        "answerId": "2d8ff0e9-8dd5-42a6-9eaa-dba26de9b356", 
-        "text": "Reforço negativo",
-        "isCorrect": false 
-      },
-      { 
-        "answerId": "137a890b-134a-4c78-bc6d-2678264b9d63", 
-        "text": "Punição negativa",
-        "isCorrect": false 
-      },
-      { 
-        "answerId": "5820a2df-5560-48e8-bb02-9d8f890992b7", 
-        "text": "Punição positiva",
-        "isCorrect": true 
-      }
-    ]
-  },
-  {
-    "questionId": "a9f8b497-8a02-416f-a5fb-73bcf65c10f3",
-    "question": "Qual o conceito caracterizado pela retirada de um elemento gratificante ao indivíduo como uma punição para a diminuição de um comportamento.",
-    "answers": [
-      { 
-        "answerId": "b83b55e3-f96a-42f1-9c6a-ee2394a172cb", 
-        "text": "Reforço positivo",
-        "isCorrect": false 
-      },
-      { 
-        "answerId": "e1bba49b-d0a7-4768-86b1-6f57b41ed52f", 
-        "text": "Reforço negativo",
-        "isCorrect": false 
-      },
-      { 
-        "answerId": "edf1f47d-31d7-4181-b69e-1d9b12824259", 
-        "text": "Punição negativa",
-        "isCorrect": true 
-      },
-      { 
-        "answerId": "e6fe4401-4b10-4841-9f99-1461ad961750", 
-        "text": "Punição positiva",
-        "isCorrect": false 
-      }
-    ]
-  },
-  {
     "questionId": "9a65de0d-c55b-4654-9868-196d5ab7fc9b",
     "question": "Marque a alternativa que completa a lacuna: No _________________ um elemento de recompensa é adicionado quando o comportamento desejado é alcançado.",
     "answers": [
@@ -177,6 +99,58 @@ export const questions = [
       { 
         "answerId": "bc1e5976-1c08-4e1d-90b2-bb31546e4010", 
         "text": "Punição positiva",
+        "isCorrect": false 
+      }
+    ]
+  },
+  {
+    "questionId": "5bf3582a-b684-4fe8-a489-df10a409a191",
+    "question": "É o processo em que a ocorrência de um comportamento é fortalecida por uma consequência que segue de sua ocorrência.",
+    "answers": [
+      { 
+        "answerId": "f981cde9-3a4b-4d7f-8c41-3e0de6e3abd5", 
+        "text": "Reforço",
+        "isCorrect": true 
+      },
+      { 
+        "answerId": "32b1281d-0242-450c-9329-ce7a5456212f", 
+        "text": "Auxílio",
+        "isCorrect": false 
+      },
+      { 
+        "answerId": "88ce1707-7631-407e-b8a6-73f8f017170b", 
+        "text": "Punição",
+        "isCorrect": false 
+      },
+      { 
+        "answerId": "01e56b67-6cf7-4690-95ec-0cbac632e062", 
+        "text": "Correção",
+        "isCorrect": false 
+      }
+    ]
+  },
+  {
+    "questionId": "fc292c30-0a00-47be-9d82-59920e6dd0a5",
+    "question": "Os termos ____________ & ___________ são usados para se referir a presença ou ausência de estímulos, e não a valores qualitativos de bom ou ruim.",
+    "answers": [
+      { 
+        "answerId": "0c62343d-d043-4e4d-8a42-f67054713c4b", 
+        "text": "Reforço e Punição",
+        "isCorrect": false 
+      },
+      { 
+        "answerId": "35eba16a-2e5b-40c8-85c7-ad4684958a9a", 
+        "text": "Positivo e Negativo",
+        "isCorrect": true 
+      },
+      { 
+        "answerId": "cf3543e1-fd8b-4c44-b48b-399a5b0d2f48", 
+        "text": "Clássico e Operante",
+        "isCorrect": false 
+      },
+      { 
+        "answerId": "3cf2e24d-a1e7-47e8-9d68-2dba217bd638", 
+        "text": "Elogio e Crítica",
         "isCorrect": false 
       }
     ]
