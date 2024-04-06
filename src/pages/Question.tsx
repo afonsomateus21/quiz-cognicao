@@ -27,7 +27,7 @@ export function Question() {
   const [shuffledQuestions, setShuffledQuestions] = useState<QuestionsType[]>([]);
   const [idCorrect, setIdCorrect] = useState('');
   const [selectedAnswerId, setSelectedAnswerId] = useState('');
-  const [timer, setTimer] = useState(30);
+  const [timer, setTimer] = useState(60);
   const { 
     playerLives, 
     cogncoinsAmount, 
