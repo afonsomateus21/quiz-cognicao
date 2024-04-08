@@ -34,7 +34,7 @@ export function ReinforcementsDescription() {
           text="O reforço positivo, proposto por B.F. Skinner, aumenta a probabilidade de um comportamento desejado ao apresentar uma recompensa após sua ocorrência. Elogios, reconhecimento e recompensas tangíveis são exemplos de reforço positivo. Essa técnica fortalece associações entre comportamento e consequência positiva, promovendo aprendizado e desenvolvimento pessoal."
           children={
             <CustomLink 
-              to="/reinforcements/positive-reinforcement" 
+              to="/reinforcements-book" 
               color="bg-orange-600" 
               title="Quero saber mais!" 
             />
@@ -47,7 +47,7 @@ export function ReinforcementsDescription() {
           text="No reforço negativo, um comportamento desejado é fortalecido pela remoção ou redução de um estímulo aversivo após sua ocorrência. Não se trata de punição, mas sim de eliminar uma consequência indesejada. Um exemplo é parar de tocar uma buzina irritante ao colocar o cinto de segurança no carro. Essa técnica encoraja a repetição de comportamentos que resultam na eliminação de estímulos aversivos."
           children={
             <CustomLink 
-              to="/reinforcements/negative-reinforcement" 
+              to="/reinforcements-book" 
               color="bg-lime-900" 
               title="Quero saber mais!" 
             />
