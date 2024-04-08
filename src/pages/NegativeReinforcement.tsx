@@ -5,7 +5,7 @@ import { CustomLink } from "../components/CustomLink";
 export function NegativeReinforcement() {
   return (
     <main className="bg-orange-600 h-screen flex flex-col justify-center overflow-hidden p-4 md:p-0">
-      <div className=" p-2 md:p-0 my-0 mx-auto h-full w-full md:h-3/4 md:w-3/4 flex flex-col gap-10 justify-between items-center">
+      <div className="p-2 md:p-0 my-0 mx-auto h-full w-full md:h-3/4 md:w-3/4 flex flex-col gap-10 justify-between items-center">
         <div className="w-full flex justify-between items-center">
           <NavArrowButton 
             to="/reinforcements/positive-reinforcement"

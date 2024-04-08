@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       screens: {
-        'tb': '1024px'
+        'x-small': { 'raw': '(min-height: 400px)' },
       },
       colors: {
         orange: {
@@ -21,7 +21,8 @@ export default {
         }
       },
       fontFamily: {
-        'roboto': ['Roboto', 'system-ui', 'sans-serif']
+        'roboto': ['Roboto', 'system-ui', 'sans-serif'],
+        'lilita': ['Lilita One', 'system-ui', 'sans-serif']
       },
       fontSize: {
         'md': '1.5rem'
