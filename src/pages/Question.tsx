@@ -65,7 +65,7 @@ export function Question() {
   }
 
   function handleStartGame() {
-    play();
+    // play();
     setCanStartGame(true);
   }
 
@@ -244,7 +244,10 @@ export function Question() {
         </>
         :
         <section className="flex-1 w-full flex justify-center items-center">
-          <QuestionButton title="Começar" onClick={ handleStartGame } />
+          <QuestionButton title="Começar" onClick={ () => {
+            play();
+            handleStartGame();
+          } } />
         </section>     
       }
     </div>
