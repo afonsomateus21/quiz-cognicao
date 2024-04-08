@@ -31,11 +31,11 @@ export function ReinforcementsBook() {
 
         <div className='absolute right-2 top-2 md:right-1 md:top-1 lg:right-5 lg:top-5'>
           <NavArrowButton 
-            to="/reinforcements"
+            to="/questions"
             children={
-              <ArrowRight color="#394f21" size={60} />
+              <ArrowRight color="#EA580C" size={60} />
             } 
-            color="bg-yellow-600" 
+            color="bg-lime-900" 
           />
         </div>
 
