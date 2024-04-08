@@ -4,7 +4,7 @@ import { ReinforcementDescriptionCard } from "../components/ReinforcementDescrip
 export function ReinforcementsDescription() {
   return (
     <main className="bg-yellow-600 h-[200vh] md:h-screen flex flex-col justify-center relative overflow-x-hidden">
-      <div className="p-2 md:p-0 my-0 mx-auto h-full w-full md:h-3/4 md:w-3/4 flex flex-col justify-between items-center">
+      <div className="p-2 md:p-0 my-0 mx-auto h-full w-full md:h-[95%] s-large:h-3/4 md:w-3/4 flex flex-col justify-between items-center">
         <div>
           <h1 className="text-3xl text-center text-white font-bold">Reforço 
             <span className="text-lime-900"> positivo </span> 

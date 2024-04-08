@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       screens: {
-        'x-small': { 'raw': '(min-height: 400px)' },
+        's-large': { 'raw': '(min-height: 830px)' },
       },
       colors: {
         orange: {
