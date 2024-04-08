@@ -127,8 +127,8 @@ export function ReinforcementsBook() {
         </FlippingPages>
 
         <div className="flex justify-between">
-          <button className="text-white" onClick={back}>Back</button>
-          <button className="text-white" onClick={next}>Next</button>
+          <button className="text-white" onClick={back}>Anterior</button>
+          <button className="text-white" onClick={next}>Próximo</button>
         </div>
       </div>
     </main>
