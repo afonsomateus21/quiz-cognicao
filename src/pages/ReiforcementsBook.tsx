@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { BookCover } from '../components/BookCover';
 import PositiveReinforcementCartoon from '../assets/positive-reinforcement-cartoon.jpg';
 import { NavArrowButton } from '../components/NavArrowButton';
-import { ArrowLeft, FileQuestion, Home } from 'lucide-react';
+import { ArrowLeft, FileQuestion } from 'lucide-react';
 
 export function ReinforcementsBook() {
   const [selected, setSelected] = useState(0);
