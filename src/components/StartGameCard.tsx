@@ -16,7 +16,7 @@ export function StartGameCard() {
         <div>
           <h2 className="text-center text-3xl font-bold">Quiz</h2>
 
-          <span className="text-orange-600">Ajudar ao CognBrain</span>
+          <span className="text-orange-600">Ajudar ao CogBrain</span>
         </div>
 
         <Link 
