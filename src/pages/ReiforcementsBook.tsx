@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { BookCover } from '../components/BookCover';
 import PositiveReinforcementCartoon from '../assets/positive-reinforcement-cartoon.jpg';
 import { NavArrowButton } from '../components/NavArrowButton';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { FileQuestion, Home } from 'lucide-react';
 
 export function ReinforcementsBook() {
   const [selected, setSelected] = useState(0);
@@ -14,7 +14,7 @@ export function ReinforcementsBook() {
   };
 
   const next = () => {
-    setSelected(selected => Math.min(selected + 1, 6));
+    setSelected(selected => Math.min(selected + 1, 5));
   };
 
   return (
@@ -23,7 +23,7 @@ export function ReinforcementsBook() {
           <NavArrowButton 
             to="/reinforcements"
             children={
-              <ArrowLeft color="#394f21" size={60} />
+              <Home color="#394f21" size={60} />
             } 
             color="bg-yellow-600" 
           />
@@ -33,7 +33,7 @@ export function ReinforcementsBook() {
           <NavArrowButton 
             to="/questions"
             children={
-              <ArrowRight color="#EA580C" size={60} />
+              <FileQuestion color="#EA580C" size={60} />
             } 
             color="bg-lime-900" 
           />
