@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { BookCover } from '../components/BookCover';
 import PositiveReinforcementCartoon from '../assets/positive-reinforcement-cartoon.jpg';
 import { NavArrowButton } from '../components/NavArrowButton';
-import { FileQuestion, Home } from 'lucide-react';
+import { ArrowLeft, FileQuestion, Home } from 'lucide-react';
 
 export function ReinforcementsBook() {
   const [selected, setSelected] = useState(0);
@@ -23,7 +23,7 @@ export function ReinforcementsBook() {
           <NavArrowButton 
             to="/reinforcements"
             children={
-              <Home color="#394f21" size={60} />
+              <ArrowLeft color="#394f21" size={60} />
             } 
             color="bg-yellow-600" 
           />
