@@ -49,7 +49,7 @@ export function ReinforcementsBook() {
           <div className="bg-[#F5F5F5] h-full">
             <h1 className="text-2xl font-bold font-roboto text-center">Reforço Positivo</h1>
             <p className="text-sm p-2 text-justify md:p-6">
-              O reforço positivo, conforme proposto por B.F. Skinner no contexto do condicionamento operante, 
+              O <span className='font-bold text-orange-600'>reforço positivo</span>, conforme proposto por B.F. Skinner no contexto do condicionamento operante, 
               é uma técnica comportamental que visa aumentar a ocorrência de um comportamento desejado através da 
               apresentação de um estímulo positivo ou recompensa após a realização desse comportamento. Esse tipo de 
               reforço é uma das ferramentas fundamentais na modificação do comportamento e tem implicações 
@@ -59,7 +59,7 @@ export function ReinforcementsBook() {
               realização do comportamento com uma experiência positiva, o que fortalece a conexão entre o estímulo e 
               a resposta. Por exemplo, se um aluno receber elogios e reconhecimento de seu professor por participar 
               ativamente em sala de aula, é mais provável que ele continue participando no futuro.<br/><br/>
-              O reforço positivo pode assumir diversas formas, desde elogios verbais e reconhecimento social até 
+              O <span className='font-bold text-orange-600'>reforço positivo</span> pode assumir diversas formas, desde elogios verbais e reconhecimento social até 
               recompensas tangíveis, como pontos de recompensa, adesivos, privilégios ou qualquer outro tipo de 
               recompensa que seja significativa para o indivíduo. O importante é que a recompensa seja percebida como 
               agradável e desejável pelo indivíduo, de modo a fortalecer a associação entre o comportamento e a 
@@ -71,11 +71,11 @@ export function ReinforcementsBook() {
 
           <div className="bg-[#F5F5F5] h-full">
             <p className="text-justify p-6">
-              É importante ressaltar que o reforço positivo deve ser aplicado de forma consistente e oportuna, 
+              É importante ressaltar que o <span className='font-bold text-orange-600'>reforço positivo</span> deve ser aplicado de forma consistente e oportuna, 
               de modo que o indivíduo possa facilmente associar a recompensa ao comportamento desejado. 
               Além disso, o reforço positivo deve ser usado de maneira seletiva e estratégica, focando nos 
               comportamentos específicos que se deseja promover ou fortalecer.
-              Ao utilizar o reforço positivo de maneira eficaz, é possível criar um ambiente de aprendizado e 
+              Ao utilizar o <span className='font-bold text-orange-600'>reforço positivo</span> de maneira eficaz, é possível criar um ambiente de aprendizado e 
               desenvolvimento que seja encorajador, motivador e gratificante para todos os envolvidos. 
               Isso não apenas facilita o alcance de objetivos educacionais e comportamentais, mas também promove 
               um senso de autoestima, autoconfiança e bem-estar emocional nos indivíduos, contribuindo assim para 
@@ -86,19 +86,19 @@ export function ReinforcementsBook() {
           <div className="bg-[#F5F5F5] h-full">
             <h1 className="text-2xl font-bold font-roboto text-center">Reforço Negativo</h1>
             <p className="text-justify p-6">
-              O reforço negativo, uma das principais concepções do condicionamento operante proposto por B.F. 
+              O <span className='font-bold text-yellow-600'>reforço negativo</span>, uma das principais concepções do condicionamento operante proposto por B.F. 
               Skinner, representa uma forma de modificação de comportamento na qual a frequência de um comportamento 
               desejado é aumentada pela remoção ou redução de um estímulo aversivo ou desagradável após a realização 
-              desse comportamento. Em outras palavras, o reforço negativo envolve a eliminação de uma consequência 
+              desse comportamento. Em outras palavras, o <span className='font-bold text-yellow-600'>reforço negativo</span> envolve a eliminação de uma consequência 
               indesejada como resultado da realização do comportamento desejado, o que fortalece a probabilidade de 
               que o comportamento seja repetido no futuro.<br/><br/>
-              Um exemplo clássico de reforço negativo é quando um condutor de um veículo para de tocar uma buzina 
+              Um exemplo clássico de <span className='font-bold text-yellow-600'>reforço negativo</span> é quando um condutor de um veículo para de tocar uma buzina 
               irritante assim que o passageiro coloca o cinto de segurança. Neste caso, a remoção do som desagradável 
               da buzina serve como uma consequência reforçadora para a ação de colocar o cinto de segurança, 
               tornando mais provável que o passageiro repita esse comportamento no futuro para evitar a buzina.<br/><br/>
-              É importante destacar que o reforço negativo não envolve punição ou consequências adversas pelo 
+              É importante destacar que o <span className='font-bold text-yellow-600'>reforço negativo</span> não envolve punição ou consequências adversas pelo 
               comportamento indesejado, mas sim a remoção de um estímulo aversivo como consequência do comportamento 
-              desejado. Isso significa que o objetivo do reforço negativo não é apenas suprimir um comportamento 
+              desejado. Isso significa que o objetivo do <span className='font-bold text-yellow-600'>reforço negativo</span> não é apenas suprimir um comportamento 
               indesejado, mas sim incentivar a ocorrência de um comportamento alternativo que leve à eliminação do 
               estímulo aversivo.
             </p>
@@ -106,19 +106,19 @@ export function ReinforcementsBook() {
 
           <div className="bg-[#F5F5F5] h-full">
             <p className="text-justify p-6">
-              É importante destacar que o reforço negativo não envolve punição ou consequências adversas pelo 
+              É importante destacar que o <span className='font-bold text-yellow-600'>reforço negativo</span> não envolve punição ou consequências adversas pelo 
               comportamento indesejado, mas sim a remoção de um estímulo aversivo como consequência do comportamento 
-              desejado. Isso significa que o objetivo do reforço negativo não é apenas suprimir um comportamento 
+              desejado. Isso significa que o objetivo do <span className='font-bold text-yellow-600'>reforço negativo</span> não é apenas suprimir um comportamento 
               indesejado, mas sim incentivar a ocorrência de um comportamento alternativo que leve à eliminação do 
               estímulo aversivo.
-              O reforço negativo pode assumir diversas formas, desde a remoção de dor física ou desconforto até a 
+              O <span className='font-bold text-yellow-600'>reforço negativo</span> pode assumir diversas formas, desde a remoção de dor física ou desconforto até a 
               eliminação de pressões sociais ou responsabilidades. Por exemplo, um estudante pode evitar uma punição 
               (estímulo aversivo) como resultado da entrega de uma tarefa no prazo (comportamento desejado), o que 
               reforça a probabilidade de que ele continue entregando tarefas no prazo no futuro.
-              Ao utilizar o reforço negativo de forma adequada e consistente, é possível promover comportamentos 
+              Ao utilizar o <span className='font-bold text-yellow-600'>reforço negativo</span> de forma adequada e consistente, é possível promover comportamentos 
               desejados, fortalecer habilidades e estabelecer padrões de conduta positivos em uma variedade de 
               contextos, incluindo educação, treinamento de animais, gestão de equipes e terapia comportamental. 
-              No entanto, é essencial garantir que o reforço negativo seja aplicado de maneira ética e responsável, 
+              No entanto, é essencial garantir que o <span className='font-bold text-yellow-600'>reforço negativo</span> seja aplicado de maneira ética e responsável, 
               respeitando sempre o bem-estar e a dignidade dos indivíduos envolvidos.
             </p>
           </div>
