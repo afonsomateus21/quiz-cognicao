@@ -20,7 +20,7 @@ export function GameWinner() {
           <CustomLink color="bg-yellow-600" title="Início" to="/" />
 
           <div>
-            <h1 className="font-bold text-xl md:text-7xl text-center md:text-right text-white">Obrigada,<br/> cognauta!</h1>
+            <h1 className="font-bold text-xl md:text-7xl text-center md:text-right text-white">Obrigado,<br/> cognauta!</h1>
 
             <p className="text-sm md:text-xl text-white text-center md:text-right mt-4">
               Você me deixou feliz<br/> <strong>completando o quiz!!!</strong>

@@ -65,7 +65,7 @@ export function Question() {
   }
 
   function handleStartGame() {
-    // play();
+    play();
     setCanStartGame(true);
   }
 
@@ -78,15 +78,7 @@ export function Question() {
   }
 
   useEffect(() => {
-    const shuffledQuestionsCopy = [...questions];
-    const shuffledQuestionsResult = shuffleArray(shuffledQuestionsCopy);
-    
-    const shuffledQuestionsWithShuffledAnswers = shuffledQuestionsResult.map(question => ({
-      ...question,
-      answers: shuffleArray(question.answers)
-    }));
-    
-    setShuffledQuestions(shuffledQuestionsWithShuffledAnswers);
+    setShuffledQuestions(shuffleArray(questions));
   }, []);
 
   function handleAnswer(isCorrect: boolean, id: string) {
@@ -244,10 +236,7 @@ export function Question() {
         </>
         :
         <section className="flex-1 w-full flex justify-center items-center">
-          <QuestionButton title="Começar" onClick={ () => {
-            play();
-            handleStartGame();
-          } } />
+          <QuestionButton title="Começar" onClick={ handleStartGame } />
         </section>     
       }
     </div>
