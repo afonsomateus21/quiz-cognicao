@@ -8,6 +8,7 @@ export default {
     extend: {
       screens: {
         's-large': { 'raw': '(min-height: 830px)' },
+        'ss-large': { 'raw': '(min-width: 130px)' }
       },
       colors: {
         orange: {

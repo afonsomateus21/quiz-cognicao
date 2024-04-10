@@ -23,7 +23,7 @@ export function DecisionContinueOrStudy() {
         </div>
 
         <img 
-          className="w-40 h-40 md:w-48 md:h-48 lg:w-64 lg:h-80 absolute bottom-5 md:bottom-10 lg:left-64 lg:bottom-28"
+          className="w-40 h-40 ss-large:w-48 ss-large:h-48 lg:w-64 lg:h-80 absolute bottom-5 md:bottom-10 ss-large:left-36 lg:left-64 lg:bottom-28"
           src={SeriousBrain} 
           alt="Ilustração do Brain com o rosto sério" 
         />
