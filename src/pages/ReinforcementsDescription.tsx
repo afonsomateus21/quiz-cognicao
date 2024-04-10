@@ -17,13 +17,13 @@ export function ReinforcementsDescription() {
         </div>
 
         <span 
-          className="text-9xl font-bold text-lime-900 absolute right-0 top-36 lg:right-36 lg:top-32 rotate-[-30deg]" 
+          className="text-9xl font-bold text-lime-900 absolute right-0 top-36 ss-large:right-16 lg:right-36 lg:top-32 rotate-[-30deg]" 
         >
           ?
         </span>
 
         <span 
-          className="text-9xl font-bold text-orange-600 absolute left-0 top-36 lg:left-36 lg:top-36 rotate-180" 
+          className="text-9xl font-bold text-orange-600 absolute left-0 top-36 ss-large:left-16 lg:left-36 lg:top-36 rotate-180" 
         >
           ?
         </span>
